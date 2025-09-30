@@ -1,21 +1,61 @@
-# DIO - Trilha .NET - Explorando a linguagem C#
-www.dio.me
+# Sistema de Hospedagem em C#
+![.NET](https://img.shields.io/badge/.NET-8-blue)
+![C#](https://img.shields.io/badge/C%23-Orientação_a_Objetos-brightgreen)
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de explorando a linguagem C#, da trilha .NET da DIO.
+Este repositório é um fork do desafio da DIO, focado em práticas de C# e orientação a objetos.
 
-## Contexto
-Você foi contratado para construir um sistema de hospedagem, que será usado para realizar uma reserva em um hotel. Você precisará usar a classe Pessoa, que representa o hóspede, a classe Suíte, e a classe Reserva, que fará um relacionamento entre ambos.
+## Funcionalidades implementadas
+- ✅ Validação da capacidade da suíte: impede reservas com número de hóspedes maior que a capacidade.
+- ✅ Método `ObterQuantidadeHospedes` retorna a quantidade total de hóspedes de uma reserva.
+- ✅ Método `CalcularValorDiaria` calcula o valor da reserva, aplicando **10% de desconto** para reservas com 10 dias ou mais.
 
-O seu programa deverá cálcular corretamente os valores dos métodos da classe Reserva, que precisará trazer a quantidade de hóspedes e o valor da diária, concedendo um desconto de 10% para caso a reserva seja para um período maior que 10 dias.
+## Estrutura do projeto
+- **Pessoa.cs**: representa o hóspede.
+- **Suite.cs**: representa a suíte do hotel, incluindo capacidade e valor da diária.
+- **Reserva.cs**: faz o relacionamento entre Pessoa e Suíte, realizando cálculos de quantidade de hóspedes e valor da diária.
+- **Program.cs**: arquivo principal para testar as funcionalidades implementadas.
 
-## Regras e validações
-1. Não deve ser possível realizar uma reserva de uma suíte com capacidade menor do que a quantidade de hóspedes. Exemplo: Se é uma suíte capaz de hospedar 2 pessoas, então ao passar 3 hóspedes deverá retornar uma exception.
-2. O método ObterQuantidadeHospedes da classe Reserva deverá retornar a quantidade total de hóspedes, enquanto que o método CalcularValorDiaria deverá retornar o valor da diária (Dias reservados x valor da diária).
-3. Caso seja feita uma reserva igual ou maior que 10 dias, deverá ser concedido um desconto de 10% no valor da diária.
+![Diagrama de classes do hotel](diagrama_classe_hotel.png)
+
+## 📌 Como rodar
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/andreza1freitas/trilha-net-explorando-desafio.git
+
+2. Navegue até o diretório do projeto:
+
+   ```bash
+   cd trilha-net-explorando-desafio
+
+3. Restaure os pacotes NuGet necessários:
+
+   ```bash
+   dotnet restore DesafioProjetoHospedagem.csproj
+
+4. Compile o projeto:
+
+   ```bash
+   dotnet build DesafioProjetoHospedagem.csproj
+
+5. Execute o projeto:
+
+   ```bash
+   dotnet run --project DesafioProjetoHospedagem.csproj
+<br> 
+
+### Observações
+- Implementações próprias destacando validação de capacidade e cálculo de diária com desconto.
+- Projeto utiliza **.NET 8**; recomenda-se ter a versão mais recente do SDK instalada.
+
+### 📜 Licença
+Projeto criado para estudo e prática educacional, sem fins comerciais.
 
 
-![Diagrama de classe estacionamento](diagrama_classe_hotel.png)
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+
+
+
+
+
